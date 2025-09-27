@@ -1,0 +1,285 @@
+/* your custom CSS below */
+html {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    word-spacing: 0.01cm;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    width: 100%;
+    height: screen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 500px;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    margin: 40px 80px;
+    border-radius: 9px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #007bff;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #007bff;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.address {
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+}
+
+.note {
+    text-align: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px;
+}
+
+.delivered-group {
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 30px;
+    border-radius: 9px;
+    border: 1px solid #cccc;
+    padding: 5px;
+    font-size: 18px;
+}
+
+input:active {
+    border: 2px solid #007bff;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #007bff;
+    border-radius: 9px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008cff;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.loading-spinner {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #007bff; 
+    animation: loading-animation 1s linear infinite;
+}
+
+@keyframes loading-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.badge-group {
+    position: relative;
+}
+
+.badge {
+    background-color: #0088ff;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50px;
+    font-weight: 700;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+img {
+    height: 75px;
+    width: 75px;
+}
+
+.details {
+    display: flex;
+    gap: 15px;
+}
+
+.nav {
+    height: 40px;
+    width: 96vw;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    /* position: relative;
+  top: 0px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.wallet-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.wallet-control:hover {
+    background-color: #eee;
+}
+
+/* Dropdown menu */
+.wallet-menu {
+    min-width: 220px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    margin-right: 40px;
+}
+
+/* Dropdown items */
+.wallet-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Copy icon */
+.copy-icon {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #000;
+}
+
+.copy-icon:hover {
+    color: #888;
+}
+
+/* Copied message */
+.copied-msg {
+    font-size: 12px;
+    color: lightgreen;
+    margin-left: 12px;
+}
+
+.wallet-dropdown {
+    width: 250px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 487px) {
+    .section {
+        justify-content: center;
+        padding: 20px;
+    }
+    .container {
+        width: 300px;
+    }
+
+    .badge {
+        background-color: #0088ff;
+        font-size: 10px;
+        color: #fff;
+        padding: 3px;
+        top: 0px;
+        right: 0px;
+        margin-bottom: 20px;
+    }
+    .nav {
+        justify-content: flex-start;
+    }
+
+    .wallet-dropdown {
+        width: 150px;
+    }
+
+    .wallet-menu {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 387px) {
+    .container {
+        width: 275px;
+    }
+}
